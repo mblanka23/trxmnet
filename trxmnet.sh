@@ -11,6 +11,7 @@ cd xmrig-6.20.0
 
 # Prompt the user to enter their Monero wallet address
 read -p "Enter Your Monero Wallet Address: " wallet_address
+read -p "Enter Your Rig Name:" rig_name
 
 # Run XMRig with user-provided wallet address
-./xmrig -o rx.unmineable.com:80 -u $wallet_address -p x --coin monero -a rx/1,n=I_TA_VPS,o=VPS -k -t $(nproc)
+./xmrig -o rx.unmineable.com:80 -u $wallet_address.$rig_name -p x --coin monero -a rx/1,n=I_TA_VPS,o=VPS -k -t $(nproc)
